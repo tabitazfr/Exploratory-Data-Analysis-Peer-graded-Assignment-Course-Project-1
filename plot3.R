@@ -1,7 +1,6 @@
 data <- read.table("household_power_consumption.txt", sep=";", header=TRUE,
                    na.strings="?", stringsAsFactors=FALSE)
 
-# Format Date & subset
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 subset_data <- subset(data, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
